@@ -20,6 +20,13 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
+
+	//Creating Inputs
+	void MoveForward(float Value);
+	void MoveRight(float Value);
+	void Turn(float Value);
+	void LookUp(float Value);
+	
 	//Creating SpringArm
 	UPROPERTY(VisibleAnywhere, Category = Camera)
 	class USpringArmComponent* CameraBoom;
@@ -29,7 +36,4 @@ private:
 	class UCameraComponent* FollowCamera;
 	
 public:
-	
-
-
 };
