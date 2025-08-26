@@ -1,0 +1,15 @@
+# Ignore everything
+/*
+
+# Allow these back
+!.gitignore
+!README.md
+
+# Allow Source code
+!Source/
+!Source/**
+
+# If you have plugin source code
+!Plugins/
+!Plugins/**/
+!Plugins/**/Source/**
