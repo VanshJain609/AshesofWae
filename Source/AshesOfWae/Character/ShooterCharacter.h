@@ -20,9 +20,11 @@ protected:
 	virtual void BeginPlay() override;
 
 private:
+	//Creating SpringArm
 	UPROPERTY(VisibleAnywhere, Category = Camera)
 	class USpringArmComponent* CameraBoom;
 
+	//Creating Camera 
 	UPROPERTY(VisibleAnywhere, Category = Camera)
 	class UCameraComponent* FollowCamera;
 	

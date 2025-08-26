@@ -8,12 +8,16 @@ AShooterCharacter::AShooterCharacter()
 {
  	
 	PrimaryActorTick.bCanEverTick = true;
+	//Creating Spring Arm
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
+	//Attaching Spring Arm to my main Character
 	CameraBoom->SetupAttachment(GetMesh());
 	CameraBoom->TargetArmLength = 600.f;
 	CameraBoom->bUsePawnControlRotation = true;
 
+	//Creating Camera Component
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
+	//Attaching Camera to Spring Arm Component 
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName);
 	FollowCamera->bUsePawnControlRotation = false;
 
